@@ -59,7 +59,7 @@ function BrandDetailsView() {
       <HeaderLayout
         title={"Manage Brands"}
         btnText={"Add brand"}
-        onPress={() => onPress({ id: 0 })}
+        onPress={() => onPress({ brand_id: 0, catg_id: 0 })}
       />
       <section class="dark:bg-gray-900 p-3 ">
         <div class="mx-auto w-full">
@@ -70,7 +70,7 @@ function BrandDetailsView() {
                 setSearch={(val) => setSearch(val)}
                 title={"Manage Brands"}
                 btnText={"Add Brand"}
-                onclick={() => onPress({ id: 0 })}
+                onclick={() => onPress({ brand_id: 0, catg_id: 0 })}
                 flag={1}
                 headers={[
                   // { name: "id", value: "#" },

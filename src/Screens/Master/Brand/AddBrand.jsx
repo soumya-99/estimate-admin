@@ -72,8 +72,8 @@ function AddBrand() {
     if (Array.isArray(response?.data?.msg)) {
       console.log(response);
       const rsp = {
-        sh_brand_name: response?.data?.msg[0].brand_name,
-        sh_catg_id: response?.data?.msg[0].catg_id,
+        sh_brand_name: response?.data?.msg[0]?.brand_name,
+        sh_catg_id: response?.data?.msg[0]?.catg_id,
       };
       setValues(rsp);
       //  setBill(response?.data?.msg[0].bill_address)
