@@ -13,16 +13,16 @@ function Settings() {
       label: "General Settings",
       children: <GeneralSettings />,
     },
-    {
-      key: "2",
-      label: "Discount Settings",
-      children: <DiscountSettings />,
-    },
-    {
-      key: "3",
-      label: "GST Settings",
-      children: <GSTSettings />,
-    },
+    // {
+    //   key: "2",
+    //   label: "Discount Settings",
+    //   children: <DiscountSettings />,
+    // },
+    // {
+    //   key: "3",
+    //   label: "GST Settings",
+    //   children: <GSTSettings />,
+    // },
   ];
   return (
     <div>

@@ -46,7 +46,8 @@ function Header() {
           <div className=" text-white  space-x-4 rtl:space-x-reverse">
             <span className="relative right-0 text-sm sm:text-base  text-pretty text-blue-900 font-semibold">
               {" "}
-              {localStorage.getItem("company_name")}
+              {/* {localStorage.getItem("company_name")} */}
+              Estimate
             </span>
 
             <div className="relative inline-flex border border-blue-400 items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
@@ -58,11 +59,13 @@ function Header() {
                 onClick={handleClickProfile}
                 className="font-medium text-blue-900  dark:text-gray-300 cursor-pointer">
                 <Tooltip
-                  title={"Hello, " + localStorage.getItem("company_name")}>
-                  {localStorage.getItem("company_name").includes(" ")
+                  // title={"Hello, " + localStorage.getItem("company_name")}
+                  title={"Hello, " + "Estimate"}>
+                  {/* {localStorage.getItem("company_name").includes(" ")
                     ? localStorage.getItem("company_name").split(" ")[0][0] +
                       localStorage.getItem("company_name").split(" ")[1][0]
-                    : localStorage.getItem("company_name").charAt(0)}
+                    : localStorage.getItem("company_name").charAt(0)} */}
+                  E
                 </Tooltip>
               </span>
 

@@ -32,7 +32,8 @@ import {
   PushpinOutlined,
 } from "@ant-design/icons";
 import { Divider, Menu, Switch } from "antd";
-import IMG from "../Assets/Images/mainlogo.png";
+// import IMG from "../Assets/Images/mainlogo.png";
+import IMG from "../Assets/Images/Estimate_White.png";
 // import useAPI from "../Hooks/useApi";
 import axios from "axios";
 import { url } from "../Address/baseURL";

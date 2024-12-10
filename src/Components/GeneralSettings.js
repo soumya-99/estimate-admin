@@ -128,7 +128,7 @@ function GeneralSettings() {
             }}
           />
         </div>
-        <div className="flex justify-between sm:flex">
+        {/* <div className="flex justify-between sm:flex">
           <div className="mr-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             KOT
           </div>
@@ -140,8 +140,8 @@ function GeneralSettings() {
               setKot(!kot_flag);
             }}
           />
-        </div>
-        <div className="flex justify-between sm:flex">
+        </div> */}
+        {/* <div className="flex justify-between sm:flex">
           <div className="mr-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             Received Flag
           </div>
@@ -153,10 +153,10 @@ function GeneralSettings() {
               setReceivedFlag(!receivedFlag);
             }}
           />
-        </div>
+        </div> */}
       </div>
       <div className="grid gap-4 sm:grid-cols-3 sm:gap-6">
-        <div className="w-full">
+        {/* <div className="w-full">
           <label
             htmlFor="outlet"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -174,7 +174,7 @@ function GeneralSettings() {
             <option value="S">SMS</option>
             <option value="B">Both</option>
           </select>
-        </div>
+        </div> */}
         <div className="w-full">
           <label
             htmlFor="brand"
