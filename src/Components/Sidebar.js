@@ -486,7 +486,7 @@ function SidebarComp() {
         <ProfileOutlined
           className={
             location.pathname.includes("master")
-              ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+              ? "font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
               : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
           }
         />
@@ -511,6 +511,28 @@ function SidebarComp() {
                   : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
               }>
               <Link to={"master/unit"}>Unit</Link>
+            </div>
+          ),
+        },
+        {
+          key: "brand",
+          icon: (
+            <MoneyCollectOutlined
+              className={
+                location.pathname.includes("master/brand/view")
+                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+              }
+            />
+          ),
+          label: (
+            <div
+              className={
+                location.pathname.includes("master/brand/view")
+                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+              }>
+              <Link to={"master/brand/view"}>Brand</Link>
             </div>
           ),
         },

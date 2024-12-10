@@ -11,6 +11,9 @@ import { Democontext, loadingContext } from "./Context/Democontext";
 import Loader from "./Components/Loader";
 import Noresult from "./Screens/Noresult/Noresult";
 import Bill from "./Screens/Bill/Bill";
+import BrandDetailsView from "./Screens/Master/Brand/BrandDetailsView";
+import AddBrand from "./Screens/Master/Brand/AddBrand";
+import BrandDetailsComp from "./Screens/Master/Brand/BrandDetailsComp";
 
 const CategorywiseItemsComp = lazy(() =>
   import("./Screens/SuperAdmin/CategorywiseItems/CategorywiseItemsComp")
@@ -598,6 +601,20 @@ const router = createBrowserRouter([
                   {
                     path: "categoryedit/:id",
                     element: <CategoryAdd />,
+                  },
+                ],
+              },
+              {
+                path: "brand",
+                element: <BrandDetailsComp />,
+                children: [
+                  {
+                    path: "view",
+                    element: <BrandDetailsView />,
+                  },
+                  {
+                    path: "brandedit/:id/:id2",
+                    element: <AddBrand />,
                   },
                 ],
               },

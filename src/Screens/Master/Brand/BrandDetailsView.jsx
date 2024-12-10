@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Message } from "../../../Components/Message";
 import useAPI from "../../../Hooks/useApi";
 import HeaderLayout from "../../../Components/HeaderLayout";
-function ItemDetailsView() {
+
+function BrandDetailsView() {
   const navigation = useNavigate();
   const [called, setCalled] = useState(false);
   const { response, callApi } = useAPI();
@@ -12,7 +13,9 @@ function ItemDetailsView() {
   const [isReport, setIsReport] = useState(false);
   const [dataSet, setDataSet] = useState();
   const [search, setSearch] = useState();
+
   var comp;
+
   useEffect(() => {
     console.log(response);
     setDataSet(response?.data?.msg);
@@ -30,44 +33,49 @@ function ItemDetailsView() {
   }, [response]);
 
   useEffect(() => {
-    setDataSet(
-      response?.data?.msg?.filter((e) =>
-        e.item_name.toLowerCase().includes(search?.toString().toLowerCase())
-      )
-    );
-  }, [search]);
-
-  useEffect(() => {
-    comp = localStorage.getItem("comp_id");
-    callApi("/admin/item_list", 1, { comp_id: +comp });
+    // comp = localStorage.getItem("comp_id");
+    callApi(`/admin/brand_dtls`, 1, {
+      catg_id: 1,
+      brand_id: 0,
+    });
   }, []);
 
   const onPress = (data) => {
-    navigation("/home/master/itemdetails/adddetails/" + data.id);
+    console.log(data);
+    navigation(
+      "/home/master/brand/brandedit/" + data.brand_id + "/" + data.catg_id
+    );
   };
 
+  useEffect(() => {
+    setDataSet(
+      response?.data?.msg?.filter((e) =>
+        e.brand_name.toLowerCase().includes(search?.toString().toLowerCase())
+      )
+    );
+  }, [search]);
   return (
     <div className="py-1 w-full ">
       <HeaderLayout
-        title={"Item Details"}
-        btnText={"Add item"}
+        title={"Manage Brands"}
+        btnText={"Add brand"}
         onPress={() => onPress({ id: 0 })}
       />
-      <section class="bg-gray-50 dark:bg-gray-900 p-3 ">
+      <section class="dark:bg-gray-900 p-3 ">
         <div class="mx-auto w-full">
           <div class="bg-blue-900 dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
             <div class="overflow-x-auto">
               <DatatableAdv
                 onPress={(data) => onPress(data)}
                 setSearch={(val) => setSearch(val)}
-                flag={1}
-                title={"Item Details"}
-                btnText={"Add item"}
+                title={"Manage Brands"}
+                btnText={"Add Brand"}
                 onclick={() => onPress({ id: 0 })}
+                flag={1}
                 headers={[
-                  { name: "id", value: "#" },
-                  // { name: "hsn_code", value: "HSN Code" },
-                  { name: "item_name", value: "Name" },
+                  // { name: "id", value: "#" },
+                  { name: "brand_name", value: "Brand" },
+                  { name: "category_name", value: "Category" },
                 ]}
                 data={dataSet}
               />
@@ -75,8 +83,9 @@ function ItemDetailsView() {
           </div>
         </div>
       </section>
+      {/*  */}
     </div>
   );
 }
 
-export default ItemDetailsView;
+export default BrandDetailsView;

@@ -47,6 +47,7 @@ function CategoryAdd() {
     console.log(croppedAreaPixels);
     setCroppedAreaPixels(croppedAreaPixels);
   };
+
   const showCroppedImage = async () => {
     console.log(croppedAreaPixels, "croppedAreaPixels");
     console.log(selectedFile.name, "selectedFile");
@@ -63,6 +64,7 @@ function CategoryAdd() {
       console.error(e);
     }
   };
+
   useEffect(() => {
     if (Array.isArray(response?.data?.msg)) {
       console.log(response);
