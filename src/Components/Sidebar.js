@@ -969,87 +969,87 @@ function SidebarComp() {
         },
       ],
     },
-    {
-      key: "sub55",
-      label: "Stock",
-      icon: (
-        <TableOutlined
-          className={
-            location.pathname.includes("stock")
-              ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
-              : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-          }
-        />
-      ),
-      children: [
-        // {
-        //   key: "stock",
-        //   icon: (
-        //     <DatabaseOutlined
-        //       className={
-        //         location.pathname.includes("stock/stockview/view")
-        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-        //       }
-        //     />
-        //   ),
-        //   label: (
-        //     <div
-        //       className={
-        //         location.pathname.includes("stock/stockview/view")
-        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-        //       }>
-        //       <Link to={"stock/stockview/view"}>Stock</Link>
-        //     </div>
-        //   ),
-        // },
-        {
-          key: "stockin",
-          icon: (
-            <DatabaseOutlined
-              className={
-                location.pathname.includes("stock/stockin")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("stock/stockin")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }>
-              <Link to={"stock/stockin"}>Stock In</Link>
-            </div>
-          ),
-        },
-        {
-          key: "stockout",
-          icon: (
-            <DatabaseOutlined
-              className={
-                location.pathname.includes("stock/stockout")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("stock/stockout")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }>
-              <Link to={"stock/stockout"}>Stock Out</Link>
-            </div>
-          ),
-        },
-      ],
-    },
+    // {
+    //   key: "sub55",
+    //   label: "Stock",
+    //   icon: (
+    //     <TableOutlined
+    //       className={
+    //         location.pathname.includes("stock")
+    //           ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
+    //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+    //       }
+    //     />
+    //   ),
+    //   children: [
+    //     // {
+    //     //   key: "stock",
+    //     //   icon: (
+    //     //     <DatabaseOutlined
+    //     //       className={
+    //     //         location.pathname.includes("stock/stockview/view")
+    //     //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+    //     //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+    //     //       }
+    //     //     />
+    //     //   ),
+    //     //   label: (
+    //     //     <div
+    //     //       className={
+    //     //         location.pathname.includes("stock/stockview/view")
+    //     //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+    //     //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+    //     //       }>
+    //     //       <Link to={"stock/stockview/view"}>Stock</Link>
+    //     //     </div>
+    //     //   ),
+    //     // },
+    //     {
+    //       key: "stockin",
+    //       icon: (
+    //         <DatabaseOutlined
+    //           className={
+    //             location.pathname.includes("stock/stockin")
+    //               ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+    //               : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+    //           }
+    //         />
+    //       ),
+    //       label: (
+    //         <div
+    //           className={
+    //             location.pathname.includes("stock/stockin")
+    //               ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+    //               : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+    //           }>
+    //           <Link to={"stock/stockin"}>Stock In</Link>
+    //         </div>
+    //       ),
+    //     },
+    //     {
+    //       key: "stockout",
+    //       icon: (
+    //         <DatabaseOutlined
+    //           className={
+    //             location.pathname.includes("stock/stockout")
+    //               ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+    //               : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+    //           }
+    //         />
+    //       ),
+    //       label: (
+    //         <div
+    //           className={
+    //             location.pathname.includes("stock/stockout")
+    //               ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+    //               : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+    //           }>
+    //           <Link to={"stock/stockout"}>Stock Out</Link>
+    //         </div>
+    //       ),
+    //     },
+    //   ],
+    // },
   ];
   const showDrawer = () => {
     setOpen(true);

@@ -35,7 +35,7 @@ function BrandDetailsView() {
   useEffect(() => {
     // comp = localStorage.getItem("comp_id");
     callApi(`/admin/brand_dtls`, 1, {
-      catg_id: 1,
+      catg_id: 0,
       brand_id: 0,
     });
   }, []);
