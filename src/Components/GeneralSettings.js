@@ -115,7 +115,7 @@ function GeneralSettings() {
             }}
           />
         </div>
-        <div className="flex justify-between sm:flex">
+        {/* <div className="flex justify-between sm:flex">
           <div className="mr-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             Inventory
           </div>
@@ -127,7 +127,7 @@ function GeneralSettings() {
               setInventory(!inventory);
             }}
           />
-        </div>
+        </div> */}
         {/* <div className="flex justify-between sm:flex">
           <div className="mr-2 block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             KOT
@@ -175,7 +175,7 @@ function GeneralSettings() {
             <option value="B">Both</option>
           </select>
         </div> */}
-        <div className="w-full">
+        {/* <div className="w-full">
           <label
             htmlFor="brand"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -190,8 +190,8 @@ function GeneralSettings() {
             value={refund}
             onChange={(refund) => setRefund(refund.target.value)}
           />
-        </div>
-        <div className="w-full">
+        </div> */}
+        {/* <div className="w-full">
           <label
             htmlFor="outlet"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -207,7 +207,7 @@ function GeneralSettings() {
             <option value="A">Auto</option>
             <option value="M">Manual</option>
           </select>
-        </div>
+        </div> */}
       </div>
       <div className="flex justify-center">
         <button

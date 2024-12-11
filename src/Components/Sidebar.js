@@ -455,28 +455,28 @@ function SidebarComp() {
             </div>
           ),
         },
-        {
-          key: "headerfooter",
-          icon: (
-            <AlignCenterOutlined
-              className={
-                location.pathname.includes("settings/headerfooter")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("settings/headerfooter/view")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }>
-              <Link to={"settings/headerfooter/view"}>Header/Footer</Link>
-            </div>
-          ),
-        },
+        // {
+        //   key: "headerfooter",
+        //   icon: (
+        //     <AlignCenterOutlined
+        //       className={
+        //         location.pathname.includes("settings/headerfooter")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }
+        //     />
+        //   ),
+        //   label: (
+        //     <div
+        //       className={
+        //         location.pathname.includes("settings/headerfooter/view")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }>
+        //       <Link to={"settings/headerfooter/view"}>Header/Footer</Link>
+        //     </div>
+        //   ),
+        // },
       ],
     },
 
