@@ -5,7 +5,7 @@ const DashboardCard = ({
   body,
   footerNumber,
   footerText,
-  borderColor,
+  borderColor = "",
   primaryTextColor,
   secondaryColor,
   svg,

@@ -339,7 +339,7 @@ function SidebarComp() {
 
     {
       key: "sub2",
-      label: "Search Bill",
+      label: "Search",
       icon: (
         <FileSearchOutlined
           className={
@@ -946,28 +946,28 @@ function SidebarComp() {
             </div>
           ),
         },
-        {
-          key: "customer",
-          icon: (
-            <UserOutlined
-              className={
-                location.pathname.includes("manage/customer/view")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("manage/customer/view")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 text-xs text-wrap group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 text-xs text-wrap group"
-              }>
-              <Link to={"manage/customer/view"}>Customer Management</Link>
-            </div>
-          ),
-        },
+        // {
+        //   key: "customer",
+        //   icon: (
+        //     <UserOutlined
+        //       className={
+        //         location.pathname.includes("manage/customer/view")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }
+        //     />
+        //   ),
+        //   label: (
+        //     <div
+        //       className={
+        //         location.pathname.includes("manage/customer/view")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 text-xs text-wrap group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 text-xs text-wrap group"
+        //       }>
+        //       <Link to={"manage/customer/view"}>Customer Management</Link>
+        //     </div>
+        //   ),
+        // },
       ],
     },
     // {

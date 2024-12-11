@@ -76,7 +76,7 @@ function OutletAddEdit() {
       location: 0,
       contact_person: values.o_contact,
       phone_no: values.o_phone,
-      email_id: values.o_email,
+      email_id: values.o_email || "",
       user_id: localStorage.getItem("user_id"),
     });
   };
@@ -84,7 +84,7 @@ function OutletAddEdit() {
   const validationSchema = Yup.object({
     o_name: Yup.string().required("Outlet name is required"),
     o_phone: Yup.string().required("Phone No. is required"),
-    o_email: Yup.string().required("Email is required"),
+    // o_email: Yup.string().optional(),
     o_contact: Yup.string().required("Contact person is required"),
     o_address: Yup.string().required("Address is required"),
   });
@@ -153,7 +153,7 @@ function OutletAddEdit() {
                   </div>
                 ) : null}
               </div>
-              <div class="w-full">
+              <div class="sm:col-span-2">
                 <label
                   for="o_phone"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -176,7 +176,7 @@ function OutletAddEdit() {
                   </div>
                 ) : null}
               </div>
-              <div class="w-full">
+              {/* <div class="w-full">
                 <label
                   for="o_email"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -199,7 +199,7 @@ function OutletAddEdit() {
                     {formik.errors.o_email}
                   </div>
                 ) : null}
-              </div>
+              </div> */}
               <div class="sm:col-span-2">
                 <label
                   for="o_address"

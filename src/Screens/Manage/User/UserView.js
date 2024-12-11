@@ -50,7 +50,7 @@ function UserView() {
   }, [search]);
   useEffect(() => {
     comp = localStorage.getItem("comp_id");
-    callApi("/admin/user_list", 1, { comp_id: +comp, br_id: 0 });
+    callApi("/admin/user_list", 1, { comp_id: 1, br_id: 0 });
   }, [called]);
   const onPress = () => {
     navigation("/home/manage/usermng/usermngadd");

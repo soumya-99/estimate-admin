@@ -40,12 +40,14 @@ function AddUser() {
       }
     }
   }, [response]);
+
   const initialValues = {
     u_name: "",
     u_email: "",
     u_type: "",
     u_br_id: "",
     u_phone: "",
+    u_pass: "",
   };
 
   const onSubmit = (values) => {
@@ -54,15 +56,16 @@ function AddUser() {
     comp = localStorage.getItem("comp_id");
     userId = localStorage.getItem("user_id");
     callApi("/admin/add_user", 1, {
-      comp_id: +comp,
+      comp_id: 1,
       br_id: +values.u_br_id,
       user_name: values.u_name,
       phone_no: values.u_phone.toString(),
       email_id: values.u_email,
-      user_type: values.u_type,
+      user_type: values.u_type || "",
       active_flag: "Y",
       login_flag: "N",
       device_id: "",
+      password: values.u_pass,
       created_by: userId,
     });
     formik.handleReset();
@@ -71,12 +74,14 @@ function AddUser() {
   const validationSchema = Yup.object({
     u_name: Yup.string().required("Name is required"),
     u_phone: Yup.string().required("Phone is required"),
-    u_email: Yup.string()
-      .required("Email is required")
-      .email("Email format incorrect"),
+    // u_email: Yup.string()
+    //   .required("Email is required")
+    //   .email("Email format incorrect"),
     u_type: Yup.string().required("Type is required"),
     u_br_id: Yup.string().required("Branch is required"),
+    u_pass: Yup.string().required("Password is required"),
   });
+
   const formik = useFormik({
     initialValues,
     onSubmit,
@@ -141,7 +146,7 @@ function AddUser() {
                   </div>
                 ) : null}
               </div>
-              <div class="w-full">
+              {/* <div class="w-full">
                 <label
                   for="u_email"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -163,7 +168,7 @@ function AddUser() {
                     {formik.errors.u_email}
                   </div>
                 ) : null}
-              </div>
+              </div> */}
               <div class="w-full">
                 <label
                   for="u_type"
@@ -190,7 +195,7 @@ function AddUser() {
                 <label
                   for="u_br_id"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Branch
+                  Outlet
                 </label>
                 <select
                   id="u_br_id"
@@ -198,7 +203,7 @@ function AddUser() {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                  <option selected="">Select branch</option>
+                  <option selected="">Select outlet</option>
                   {dataSet?.map((item) => (
                     <option value={item.id}>{item.branch_name}</option>
                   ))}
@@ -206,6 +211,30 @@ function AddUser() {
                 {formik.errors.u_br_id && formik.touched.u_br_id ? (
                   <div className="text-red-500 text-sm">
                     {formik.errors.u_br_id}
+                  </div>
+                ) : null}
+              </div>
+
+              <div>
+                <label
+                  for="u_pass"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="u_pass"
+                  id="u_pass"
+                  value={formik.values.u_pass}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Type Password"
+                  required=""
+                />
+                {formik.errors.u_pass && formik.touched.u_pass ? (
+                  <div className="text-red-500 text-sm">
+                    {formik.errors.u_pass}
                   </div>
                 ) : null}
               </div>

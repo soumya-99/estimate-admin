@@ -146,7 +146,7 @@ const HomeScreen = () => {
   DASHBOARD_DATA = [
     {
       header: "Users",
-      body: users?.length?.toString(),
+      body: 4,
       footerNumber: "24",
       footerText: "new since last visit",
       borderColor: "border-pink-200",
@@ -223,7 +223,7 @@ const HomeScreen = () => {
 
       {userType !== "S" ? (
         <div className="grid grid-cols-5 gap-5 my-10 align-middle -z-50">
-          <div className="col-span-2 bg-white z-10 rounded-2xl flex justify-center items-center shadow-xl h-fit p-10">
+          {/* <div className="col-span-2 bg-white z-10 rounded-2xl flex justify-center items-center shadow-xl h-fit p-10">
             <Chart
               type="doughnut"
               data={chartData}
@@ -246,7 +246,8 @@ const HomeScreen = () => {
                 height: 350,
               }}
             />
-          </div>
+          </div> */}
+          Admin Dashboard
         </div>
       ) : (
         <div className="mt-5 text-2xl">Superuser Dashboard</div>
