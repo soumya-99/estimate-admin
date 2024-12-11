@@ -204,7 +204,7 @@ const HomeScreen = () => {
 
   return (
     <>
-      <div className="flex flex-col sm:grid sm:grid-cols-4 gap-4">
+      {/* <div className="flex flex-col sm:grid sm:grid-cols-4 gap-4">
         {DASHBOARD_DATA?.map((item, i) => (
           <div key={i} className="col-span-1 sm:w-full">
             <DashboardCard
@@ -219,10 +219,10 @@ const HomeScreen = () => {
             />
           </div>
         ))}
-      </div>
+      </div> */}
 
       {userType !== "S" ? (
-        <div className="grid grid-cols-5 gap-5 my-10 align-middle -z-50">
+        <div className="grid grid-cols-5 gap-5 my-10 align-middle -z-50 text-lg">
           {/* <div className="col-span-2 bg-white z-10 rounded-2xl flex justify-center items-center shadow-xl h-fit p-10">
             <Chart
               type="doughnut"
