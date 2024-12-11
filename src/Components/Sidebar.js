@@ -176,7 +176,7 @@ function SidebarComp() {
                   ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
                   : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
               }>
-              <Link to={"report/itemwisereport"}>Itemwise Report</Link>
+              <Link to={"report/itemwisereport"}>Productwise Sale</Link>
             </div>
           ),
         },
@@ -242,7 +242,7 @@ function SidebarComp() {
                   ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
                   : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
               }>
-              <Link to={"report/paymode"}>Pay mode Report </Link>
+              <Link to={"report/paymode"}>Sale Summary</Link>
             </div>
           ),
         },

@@ -15,7 +15,9 @@ export function calculate(data, flag) {
     due_amt = 0,
     paid_amt = 0,
     balance = 0,
-    rcpt = 0;
+    rcpt = 0,
+    tot_item_price = 0,
+    unit_price = 0;
 
   if (flag == "salereport") {
     data?.forEach((e) => (qty += e.qty));
@@ -55,22 +57,31 @@ export function calculate(data, flag) {
       net_amt.toFixed(2)
     );
   } else if (flag == "itemwisereport") {
-    data?.forEach((e) => (qty += e.qty));
+    data?.forEach((e) => (unit_price += e.unit_price));
+    data?.forEach((e) => (qty += e.tot_item_qty));
 
-    data?.forEach((e) => (price += e.price));
+    data?.forEach((e) => (tot_item_price += e.tot_item_price));
 
-    totals.push(qty.toFixed(2), price.toFixed(2));
+    totals.push(
+      qty.toFixed(2),
+      unit_price.toFixed(2),
+      tot_item_price.toFixed(2)
+    );
   } else if (flag == "userwise") {
     data?.forEach((e) => (initpay += e.net_amt));
     data?.forEach((e) => (can_amt += e.cancelled_amt));
     data?.forEach((e) => (no_of_bills += e.no_of_receipts));
     totals.push(no_of_bills, initpay.toFixed(0), can_amt.toFixed(0));
   } else if (flag == "paymode") {
-    data?.forEach((e) => (initpay += e.net_amt));
-    data?.forEach((e) => (can_amt += e.can_amt));
-    data?.forEach((e) => (rcpt += e.no_of_rcpt));
+    // data?.forEach((e) => (initpay += e.net_amt));
+    // data?.forEach((e) => (can_amt += e.can_amt));
+    // data?.forEach((e) => (rcpt += e.no_of_rcpt));
+    // totals.push(rcpt, initpay.toFixed(2), can_amt.toFixed(2));
 
-    totals.push(rcpt, initpay.toFixed(2), can_amt.toFixed(2));
+    data?.forEach((e) => (rcpt += e.no_of_rcpt));
+    data?.forEach((e) => (net_amt += e.net_amt));
+
+    totals.push(rcpt, net_amt.toFixed(2));
   } else if (flag == "recoveryreport") {
     data?.forEach((e) => (rec_amt += e.recovery_amt));
 

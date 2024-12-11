@@ -114,31 +114,31 @@ function DescriptionComp({
     }, 10);
   }
   const item = [
-    {
-      key: "1",
-      label: <div className=" text-blue-900 font-bold">Store</div>,
-      children: localStorage.getItem("company_name"),
-    },
-    {
-      key: "2",
-      label: <div className=" text-blue-900 font-bold">Telephone</div>,
-      children: localStorage.getItem("phone_no"),
-    },
-    {
-      key: "3",
-      label: <div className=" text-blue-900 font-bold">Email</div>,
-      children: localStorage.getItem("email_id"),
-    },
+    // {
+    //   key: "1",
+    //   label: <div className=" text-blue-900 font-bold">Store</div>,
+    //   children: localStorage.getItem("company_name"),
+    // },
+    // {
+    //   key: "2",
+    //   label: <div className=" text-blue-900 font-bold">Telephone</div>,
+    //   children: localStorage.getItem("phone_no"),
+    // },
+    // {
+    //   key: "3",
+    //   label: <div className=" text-blue-900 font-bold">Email</div>,
+    //   children: localStorage.getItem("email_id"),
+    // },
     {
       key: "4",
       label: <div className=" text-blue-900 font-bold">Outlet</div>,
       children: location,
     },
-    {
-      key: "5",
-      label: <div className=" text-blue-900 font-bold">Address</div>,
-      children: localStorage.getItem("address"),
-    },
+    // {
+    //   key: "5",
+    //   label: <div className=" text-blue-900 font-bold">Address</div>,
+    //   children: localStorage.getItem("address"),
+    // },
   ];
   return (
     <>
