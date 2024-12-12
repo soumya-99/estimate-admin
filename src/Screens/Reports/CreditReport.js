@@ -74,7 +74,7 @@ function CreditReport() {
       {isReport && (
         <>
           <DescriptionComp
-            title="GST Statement"
+            title="Credit Report"
             from={from}
             to={to}
             location={location ? location : "All outlets"}

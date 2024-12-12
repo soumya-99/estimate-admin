@@ -202,28 +202,28 @@ function SidebarComp() {
             </div>
           ),
         },
-        {
-          key: "71",
-          icon: (
-            <UserSwitchOutlined
-              className={
-                location.pathname.includes("report/creditreport")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("report/creditreport")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }>
-              <Link to={"report/creditreport"}>Credit Report</Link>
-            </div>
-          ),
-        },
+        // {
+        //   key: "71",
+        //   icon: (
+        //     <UserSwitchOutlined
+        //       className={
+        //         location.pathname.includes("report/creditreport")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }
+        //     />
+        //   ),
+        //   label: (
+        //     <div
+        //       className={
+        //         location.pathname.includes("report/creditreport")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }>
+        //       <Link to={"report/creditreport"}>Credit Report</Link>
+        //     </div>
+        //   ),
+        // },
         {
           key: "8",
           icon: (
@@ -242,7 +242,7 @@ function SidebarComp() {
                   ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
                   : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
               }>
-              <Link to={"report/paymode"}>Sale Summary</Link>
+              <Link to={"report/paymode"}>Summary Report</Link>
             </div>
           ),
         },

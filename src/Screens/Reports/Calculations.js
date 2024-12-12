@@ -43,17 +43,17 @@ export function calculate(data, flag) {
     data?.forEach((e) => (qty += e.no_of_items));
     data?.forEach((e) => (price += e.price));
     data?.forEach((e) => (net_amt += e.net_amt));
-    data?.forEach((e) => (taxable_amt += e.taxable_amt));
-    data?.forEach((e) => (cgst_amt += e.cgst_amt));
-    data?.forEach((e) => (sgst_amt += e.sgst_amt));
-    data?.forEach((e) => (total_tax += e.total_tax));
+    // data?.forEach((e) => (taxable_amt += e.taxable_amt));
+    // data?.forEach((e) => (cgst_amt += e.cgst_amt));
+    // data?.forEach((e) => (sgst_amt += e.sgst_amt));
+    // data?.forEach((e) => (total_tax += e.total_tax));
 
     totals.push(
       qty.toFixed(2),
       price.toFixed(2),
-      cgst_amt.toFixed(2),
-      sgst_amt.toFixed(2),
-      " ",
+      // cgst_amt.toFixed(2),
+      // sgst_amt.toFixed(2),
+      // " ",
       net_amt.toFixed(2)
     );
   } else if (flag == "itemwisereport") {
@@ -78,10 +78,11 @@ export function calculate(data, flag) {
     // data?.forEach((e) => (rcpt += e.no_of_rcpt));
     // totals.push(rcpt, initpay.toFixed(2), can_amt.toFixed(2));
 
-    data?.forEach((e) => (rcpt += e.no_of_rcpt));
+    // data?.forEach((e) => (rcpt += e.no_of_rcpt));
     data?.forEach((e) => (net_amt += e.net_amt));
+    data?.forEach((e) => (rcpt += e.due_amt));
 
-    totals.push(rcpt, net_amt.toFixed(2));
+    totals.push(net_amt.toFixed(2), rcpt);
   } else if (flag == "recoveryreport") {
     data?.forEach((e) => (rec_amt += e.recovery_amt));
 
