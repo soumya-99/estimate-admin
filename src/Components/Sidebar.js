@@ -92,12 +92,56 @@ function SidebarComp() {
         />
       ),
       children: [
+        // {
+        //   key: "3",
+        //   icon: (
+        //     <BookOutlined
+        //       className={
+        //         location.pathname.includes("report/daybook")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }
+        //     />
+        //   ),
+        //   label: (
+        //     <div
+        //       className={
+        //         location.pathname.includes("report/daybook")
+        //           ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  dark:hover:bg-gray-700 group"
+        //       }>
+        //       <Link to={"report/daybook"}>Day book </Link>
+        //     </div>
+        //   ),
+        // },
+        // {
+        //   key: "4",
+        //   icon: (
+        //     <BarChartOutlined
+        //       className={
+        //         location.pathname.includes("report/salereport")
+        //           ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-300 hover:duration-100  dark:hover:bg-gray-700 group"
+        //       }
+        //     />
+        //   ),
+        //   label: (
+        //     <div
+        //       className={
+        //         location.pathname.includes("report/salereport")
+        //           ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
+        //       }>
+        //       <Link to={"report/salereport"}>Sale Report</Link>{" "}
+        //     </div>
+        //   ),
+        // },
         {
-          key: "3",
+          key: "6",
           icon: (
-            <BookOutlined
+            <OrderedListOutlined
               className={
-                location.pathname.includes("report/daybook")
+                location.pathname.includes("report/itemwise")
                   ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
                   : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
               }
@@ -106,33 +150,11 @@ function SidebarComp() {
           label: (
             <div
               className={
-                location.pathname.includes("report/daybook")
-                  ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  dark:hover:bg-gray-700 group"
+                location.pathname.includes("report/itemwise")
+                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
               }>
-              <Link to={"report/daybook"}>Day book </Link>
-            </div>
-          ),
-        },
-        {
-          key: "4",
-          icon: (
-            <BarChartOutlined
-              className={
-                location.pathname.includes("report/salereport")
-                  ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-300 hover:duration-100  dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("report/salereport")
-                  ? "  font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white hover:duration-100  dark:hover:bg-gray-700 group"
-              }>
-              <Link to={"report/salereport"}>Sale Report</Link>{" "}
+              <Link to={"report/itemwisereport"}>Productwise Sale</Link>
             </div>
           ),
         },
@@ -155,28 +177,6 @@ function SidebarComp() {
                   : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
               }>
               <Link to={"report/cancelbill"}>Cancelled Bill Report</Link>
-            </div>
-          ),
-        },
-        {
-          key: "6",
-          icon: (
-            <OrderedListOutlined
-              className={
-                location.pathname.includes("report/itemwise")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("report/itemwise")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }>
-              <Link to={"report/itemwisereport"}>Productwise Sale</Link>
             </div>
           ),
         },
@@ -312,28 +312,28 @@ function SidebarComp() {
             </div>
           ),
         },
-        {
-          key: "84",
-          icon: (
-            <UserSwitchOutlined
-              className={
-                location.pathname.includes("report/stockreport")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }
-            />
-          ),
-          label: (
-            <div
-              className={
-                location.pathname.includes("report/stockreport")
-                  ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
-                  : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
-              }>
-              <Link to={"report/stockreport"}>Stock Report</Link>
-            </div>
-          ),
-        },
+        // {
+        //   key: "84",
+        //   icon: (
+        //     <UserSwitchOutlined
+        //       className={
+        //         location.pathname.includes("report/stockreport")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }
+        //     />
+        //   ),
+        //   label: (
+        //     <div
+        //       className={
+        //         location.pathname.includes("report/stockreport")
+        //           ? " font-semibold flex items-center p-2 my-2 rounded-lg dark:text-white  hover:duration-100  dark:hover:bg-gray-700 group"
+        //           : "flex items-center p-2  rounded-lg dark:text-white  hover:duration-100   dark:hover:bg-gray-700 group"
+        //       }>
+        //       <Link to={"report/stockreport"}>Stock Report</Link>
+        //     </div>
+        //   ),
+        // },
       ],
     },
 
